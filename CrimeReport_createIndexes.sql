@@ -1,0 +1,34 @@
+-- creation of indexes:
+
+/* Index: HASRESPONSE_FK */
+create index HASRESPONSE_FK on RESPONSE_ACTION (REPORTID ASC)
+GO
+
+
+/* Index: PERFORMS_FK */
+create index PERFORMS_FK on RESPONSE_ACTION (POLICEMANSSN ASC)
+GO
+
+
+/* Index: LOCATEIN_FK */
+create index LOCATEIN_FK on ADDRESSES (RESIDENTSSN ASC)
+GO
+
+
+/* Index: REPORTS_FK */
+create index REPORTS_FK on CRIME_REPORT (RESIDENTSSN ASC)
+GO
+
+
+/* Index: RECIEVES_FK */
+create index RECIEVES_FK on CRIME_REPORT (POLICEMANSSN ASC)
+GO
+
+/* Index: CATEGORIZES_FK */
+create index CATEGORIZES_FK on CRIME_REPORT (CATEGORYCODE ASC)
+GO
+
+
+/* Index: LOCATESIN_FK */
+create index LOCATESIN_FK on CRIME_REPORT (ID ASC)
+GO
